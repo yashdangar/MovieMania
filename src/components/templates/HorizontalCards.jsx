@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function HorizontalCards({ data,title="null" }) {
+function HorizontalCards({ data, title = "null" }) {
   // console.log(data);
 
   return (
@@ -26,7 +26,9 @@ function HorizontalCards({ data,title="null" }) {
                 {d.name || d.title || d.original_name || d.original_title}
               </h1>
               <p className="text-zinc-300">
-                {d.overview.slice(0, 50)}...
+                {d.overview
+                  ? `${d.overview.slice(0, 50)}...`
+                  : "No description available"}
                 <span className="text-zinc-500">more</span>
               </p>
             </div>

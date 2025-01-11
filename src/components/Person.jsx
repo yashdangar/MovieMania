@@ -46,13 +46,16 @@ function Person() {
   return person.length > 0 ? (
     <div className="w-full h-screen">
       <div className="w-full flex items-center justify-between">
-        <h1 className="text-xl font-semibold text-zinc-400">
-          <i
-            onClick={() => navigate(-1)}
-            className="ri-arrow-left-line hover:text-[#6556CD]"
-          ></i>
-          person
-        </h1>
+      <div className="px-6 lg:px-8 flex items-center gap-4 mb-8">
+        <button
+          onClick={() => navigate(-1)}
+          className="p-2 bg-gray-800/50 rounded-full hover:bg-gray-700/50 transition-all duration-300 mt-1"
+          aria-label="Go Back"
+        >
+          <i className="ri-arrow-left-line text-2xl text-zinc-400 hover:text-purple-400"></i>
+        </button>
+        <h1 className="text-xl font-semibold text-zinc-400">Person</h1>
+      </div>
         <div className="flex items-center w-[80%]">
           <Topnav />
         </div>
